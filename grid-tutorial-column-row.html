@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="grid-column-row.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grid Display</title>
+</head>
+<body>
+
+    <div>
+        <!-- Importante entender a grade de linhas do grid. Todas as referencias númericas são 
+        baseadas nelas. Existe uma linha a mais do que número de linhas/colunas-->
+        <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/64626/grid-column.png" alt="Grid Columns" />
+    </div>
+
+    <div>
+        <h1>grid-column</h1>
+        <section class="grid grid-column">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+        </section>
+    </div>
+
+    <div>
+        <h1>grid-column span</h1>
+        <section class="grid grid-column-1">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+        </section>
+    </div>
+
+    <div>
+        <!-- Ao inves de utilizar o número da linha vc pode nomear as colunas 
+        O nome corresponde à linha INICIAL da célula nomeada-->
+        <h1>[col1-inicio]</h1>
+        <section class="grid grid-column-2">
+            <div class="item item-1">1</div>
+            <div class="item item-2">2</div>
+            <div class="item item-3">3</div>
+            <div class="item item-4">4</div>
+            <div class="item item-5">5</div>
+            <div class="item item-6">6</div>
+        </section>
+    </div>
+
+</body>
+</html>

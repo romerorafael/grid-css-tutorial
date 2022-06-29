@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="grid-css.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Grid Display</title>
+</head>
+<body>
+
+    <div id="display-grid">
+        <h1>display:block</h1>
+        <!-- Não alterou nada, pq o grid precisa de infos adicionais
+        tipo rows e coloumns-->
+        <section class="grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+    
+    <div id="display-grid">
+        <h1>display:grid</h1>
+        <section class="grid">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+
+    <div id="display-grid-with-column-px">
+        <h1>grid-template-columns: 200px 200px;</h1>
+        <!-- 
+            Alterando o número de colunas, cada medida é uma nova coluna
+            podendo usar qualquer unidade (px, %, rem) 
+            Quebra o tamanho da div, caso os itens tenham tamanho 
+            maior que o container
+        -->
+        <section class="grid grid-template-columns">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+
+    <div id="display-grid-with-column-fr">
+        <h1>grid-template-columns: 1fr 2fr 3fr;</h1>
+        <!-- 
+            Nova unidade de tamanho, fr, usa uma porção fracionada.
+            2fr seria o dobro de 1fr, ocupa o tamanho máximo do container
+        -->
+        <section class="grid grid-template-columns-2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+
+    <div id="display-subgrid">
+        <h1>subgrid</h1>
+        <!-- 
+            Os elementos filhos não herdam o display grid;
+            para deixar é necessário criar mais uma classe com as novas definições
+        -->
+        <section class="grid grid-template-columns-2">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item subgrid">
+                <div>5.1</div>
+                <div>5.2</div>
+                <div>5.3</div>
+            </div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+</body>
+</html>

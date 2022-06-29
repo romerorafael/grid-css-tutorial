@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="grid-css.css" />
+    <title> Grid Template Coloumns</title>
+</head>
+<body>
+    <!-- Define a quantidade de colunas para o Grid -->
+    <div>
+        <h1>grid-template-columns: 100px 100px 100px 100px;</h1>
+        <section class="grid grid-template-columns-1">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+
+    <div>
+        <h1>grid-template-columns: 100px 100px 100px 100px -> com quebra;</h1>
+        <!-- 
+            elementos muito grandes ele vai quebrar a coluna do grid
+        -->
+        <section class="grid grid-template-columns-1">
+            <div class="item">Palavramuitogrande</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">Palavramuitogrande</div>
+        </section>
+    </div>
+
+    <div>
+        <h1>grid-template-columns: 1fr 2fr 1fr 1fr 1fr 1fr 1fr;</h1>
+        <!-- 
+            Ele cria as colunas independentemente do numero de itens
+            dentro do container
+        -->
+        <section class="grid grid-template-columns-3">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+
+    <div>
+        <h1>grid-template-columns: 1fr 2fr;</h1>
+        <!-- 
+            quando usa a unidade fr, a celula do grid vai respeitar
+            o tamanho do elemento
+        -->
+        <section class="grid grid-template-columns-4">
+            <div class="item">Palavramuitogrande</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+        </section>
+    </div>
+    
+    <div>
+        <h1>grid-template-columns: minmax</h1>
+        <!-- 
+            minmax define um tamanha minimo e um tamanho máximo 
+            da celula do grid
+        -->
+        <section class="grid grid-template-columns-5">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+    <div>
+        <h1>grid-template-columns: minmax > com quebra</h1>
+        <!-- 
+            Mesmo usando o fr dentro do minmax ele não respeita o tamanho
+            do elemento interno
+        -->
+        <section class="grid grid-template-columns-5">
+            <div class="item">Palavramuitogrande</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+    <div>
+        <h1> grid-template-columns: repeat(3, 1fr);</h1>
+        <!-- 
+            Uma maneira de simplificar a criação de várias colunas
+        -->
+        <section class="grid grid-template-columns-6">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+    <div>
+        <h1> grid-template-columns: repeat(auto-fit, 200px);</h1>
+        <!-- 
+            O auto-fit faz as colunas se adequarem para caberem dentro 
+            do container
+        -->
+        <section class="grid grid-template-columns-7">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+    <div>
+        <h1> grid-template-columns: repeat(auto-fit, minmax(100px, auto));</h1>
+        <!-- 
+           O melhor para responsividade, mantem um tamanho mínimo mas tenta sempre
+           manter o melhor para caber dentro do container
+        -->
+        <section class="grid grid-template-columns-8">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+    <div>
+        <h1> grid-template-columns: repeat(auto-fill, minmax(100px, auto));</h1>
+        <!-- 
+           O auto-fill cria novas colunas para preencher o 
+           container
+        -->
+        <section class="grid grid-template-columns-9">
+            <div class="item">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+        </section>
+    </div>
+
+
+</body>
+</html>
